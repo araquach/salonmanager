@@ -8,7 +8,10 @@
 
 @include('widgets.holiday')
 
-{{ HTML::link('/holiday/index', "Holidays") }}
-</div>
+<a href="{{ url('/holiday/index') }}"><h2>Holidays</h2></a>
+</div> <!--end holiday-->
+
+</div> <!--end staffPage-->
+
 
 @stop

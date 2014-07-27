@@ -2,9 +2,12 @@
 
 View::composer('widgets.holiday', function ($view)
 {
-    $total = Holiday::all()->count();
-    $entitlement = 7;
-    $remaining = 13;
+    $total = Holiday::sum('hours_requested');
+    
+    $entitlement = 20;
+    
+    $remaining = $entitlement - $total;
+    
     $saturday = 1;
     
     $view->with(array('total'=>$total, 'entitlement'=>$entitlement, 'remaining'=>$remaining, 'saturday'=>$saturday));
