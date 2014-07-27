@@ -27,7 +27,7 @@
 <div class="container" id="page">
 
 	<header>
-		<div id="logo">{{ HTML::link('/', "Home") }}</div>
+		<div id="logo"><a href="{{ url('/') }}"><h1>Salon Manager</h1></a></div>
 	</header>
 	
 	@yield('content')
@@ -35,6 +35,7 @@
 	<div class="group"></div>
 
 	<footer>
+	<div id="mainmenu">
 		<nav class="group">
 		{{-- add jquery active --}}
 			<ul>
@@ -44,6 +45,7 @@
 				<li>{{ HTML::link('logout', "Log Out") }}</li>
 			</ul>
 		</nav>
+	</div>
 	</footer>
 	
 
