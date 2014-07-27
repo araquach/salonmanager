@@ -1,0 +1,131 @@
+@media only screen and (max-device-width: 480px) {
+	/* @group General */
+	
+	h1 {
+		font-size: 3em;
+	}
+	
+	.menuBox h2 {
+		font-size: 2.5em;
+	}
+	
+	p {
+		font-size: 2.5em;
+	}
+	
+	/* @end */
+	
+	/* @group View Styling */
+	
+	div.view {
+		width: 400px;
+		height: 400px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		font-size: 1.7em;
+	}
+	
+	div.view a {
+		width: 410px;
+		height: 410px;
+	}
+	
+	
+	.menuBox.small {
+		width: 410px;
+		height: 410px;
+		background-position: center 70px;
+		background-size: 60%;
+		background-repeat: no-repeat;
+	}
+	
+	.menuBox.wide {
+		width: 880px;
+		height: 420px;
+		background-position: center 70px;
+		background-size: 30%;
+		background-repeat: no-repeat;
+	}
+	
+	/* @end */
+	
+	/* @group Form Styling */
+	
+	div.form {
+		background-size: 35%;
+	}
+	
+	div.form.user {
+		background: url('../images/icons/icons_user.png') no-repeat 40px 40px rgb(94, 164, 40);
+	}
+	
+	div#ui-datepicker-div.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
+		width: 700px;
+		height: 700px;
+	}
+	
+	a.ui-state-default {
+		width: 80px;
+		height: 80px;
+		font-size: 2em;
+	}
+	
+	/* @end */
+	
+	/* @group Detail View Styling */
+	
+	.detail {
+		width: 900px;
+		padding: 20px;
+	}
+	
+	table.detail-view .null
+	{
+	
+	}
+	
+	table.detail-view
+	{
+		border-collapse: collapse;
+		width: 900px;
+		margin: 0;
+	}
+	
+	
+	
+	table.detail-view th, table.detail-view td
+	{
+		font-size: 3em;
+		padding: 0.3em 0.6em;
+		vertical-align: top;
+		color: #FFF;
+		font-weight: normal;
+	}
+	
+	table.detail-view th
+	{
+		text-align: left;
+		width: 200px;
+	}
+	
+	table.detail-view tr.odd
+	{
+		background-color: none;
+	}
+	
+	table.detail-view tr.even
+	{
+		background: none;
+	}
+	
+	table.detail-view tr.odd th
+	{
+	}
+	
+	table.detail-view tr.even th
+	{
+	}
+	
+	/* @end */
+	
+}

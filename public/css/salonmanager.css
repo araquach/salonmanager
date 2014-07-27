@@ -1,0 +1,658 @@
+@import "mobile.css";
+
+/* @group Clear/fix styling */
+
+.group:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+/*--- ie6*-----*/
+* html .group {
+	height: 1%;
+}
+
+/*----- ie7 -----*/
+*:first-child+html .group {
+	min-height: 1px;
+}
+
+/* @end */
+
+
+
+/* @group Main styling */
+
+body {
+	background-color: rgb(1,27,64);
+}
+
+.container {
+	padding: 0 20px;
+	padding-bottom: 70px;
+	min-width: 800px;
+}
+
+p,h1,h2,h3,h4,h5,h6,a,b {
+	color: #FFF;
+}
+
+ul {
+	padding-left: 0;
+}
+
+li {
+	list-style: none;
+}
+
+.view {
+	margin-bottom: 20px;
+}
+
+p,h1,h2,h3,h4,h5,h6,a {
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	padding: 40px 0;
+	background: url('../images/icons/icons_home.png') no-repeat;
+	background-position: right;
+	background-size: 75px 75px;
+	height: 60px;
+}
+
+header a {
+	text-decoration: none;
+}
+
+a p.pageLink {
+	font-size: 1.3em;
+	font-weight: bold;
+	margin-top: 40px;
+	opacity: .7;
+}
+
+a p.pageLink:hover {
+	opacity: 1;
+}
+
+.pageHead {
+	height: 250px;
+	padding-left: 220px;
+	padding-top: 30px;
+	background-repeat: no-repeat;
+	background-position: 40px 30px;
+	margin-top: -30px;
+	position: relative;
+}
+
+.pageHead nav {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	float: left;
+	padding-left: 20px;
+}
+
+.pageHead nav ul {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.pageHead nav ul li {
+	float: left;
+}
+
+.pageHead.holiday nav ul li a,
+.pageHead.lieu nav ul li a,
+.pageHead.sick nav ul li a,
+.pageHead.products nav ul li a,
+.pageHead.messages nav ul li a,
+.pageHead.figures nav ul li a,
+.pageHead.user nav ul li a,
+.pageHead.users nav ul li a {
+	border: 5px solid #FFF;
+	border-radius: 20px;
+	padding: 10px;
+	font-size: .8em;
+	display: inline;
+}
+
+.pageHead nav a {
+	list-style-type: none;
+	display: inline;
+	margin: 10px;
+	line-height: 100px;
+	text-decoration: none;
+	color: #FFF;
+	opacity: .7;
+}
+
+.pageHead nav a  {
+	color: #FFF;
+	text-decoration: none;
+	margin: 10px 10px;	
+}
+
+.pageHead nav a:hover {
+	opacity: 1;
+	border-bottom: none;
+	color: #FFF;
+}
+
+.pageHead ul.info {
+	margin: 0px;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	color: #FFF;
+}
+
+.summary {
+	display: none;
+}
+/* @end */
+
+/* @group general Colour styles */
+
+.holiday {
+	background-color: rgb(45, 123, 232);
+}
+
+.lieu {
+	background-color: rgb(94, 164, 40);
+}
+
+.sick {
+	background-color: rgb(84, 57, 172);
+}
+
+.products {
+	background-color: rgb(186, 34, 46);
+}
+
+.blank {
+	background-color: rgb(84, 57, 172);
+}
+
+.messages {
+	background-color: rgb(186, 34, 46);
+}
+
+.figures {
+	background-color: rgb(208, 72, 46);
+}
+
+.staff {
+	background-color: rgb(94, 164, 40);
+}
+
+.users {
+	background-color: rgb(45, 123, 232);
+}
+
+.recruitment {
+	background-color: rgb(208, 72, 46);
+}
+
+.feedback {
+	background-color: rgb(186, 34, 46);
+}
+
+.detailCode {
+	float: left;
+	width: 106.8%;
+	height: 20px;
+	margin: -20px -5px 20px -20px;
+}
+
+.detailCode.pending {
+	background-color: rgb(208, 111, 45);
+}
+
+.detailCode.unapproved {
+	background-color: rgb(186, 34, 46);
+}
+
+.detailCode.approved {
+	background-color: rgb(108, 197, 39);
+}
+
+span.empty {
+	color: #FFF;
+}
+
+
+
+/* @group list Formatting */
+
+div.items {
+	padding: 10px;
+	float: left;
+}
+
+/* @end */
+
+div.view {
+	width: 150px;
+	height: 150px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 20px;
+	line-height: 1.5em;
+	position: relative;
+}
+
+div.view a {
+	width: 160px;
+	height: 160px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	opacity: 0;
+}
+
+/* @end */
+
+/* @group Nav Styling */
+
+#mainmenu ul {
+	padding-left: 0;
+}
+
+#mainmenu ul li {
+	display: inline;
+	margin-right: 20px;
+	text-decoration: none;
+}
+
+#loginmenu ul li {
+	list-style: none;
+}
+
+/* @end */
+
+/* @group Staff Page */
+
+
+#staffPage ul.info {
+	position: absolute;
+	bottom: 5px;
+	right: 20px;
+	text-align: right;
+}
+
+#staffPage ul.info li {
+	color: #FFF;
+}
+
+#staffPage ul.info li.hidden {
+	display: none;
+}
+
+#staffPage h2 {
+	position: absolute;
+	font-size: 1em;
+	top: 20px;
+	left: 20px;
+	width: 90%;
+	height: 90%;
+}
+
+.menuBox {
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	float: left;
+	position: relative;
+}
+
+.menuBox p,
+.menuBox h2 {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+
+.menuBox h2 {
+	font-size: 1.2em;
+	bottom: 20px;
+	left: 20px;
+}
+
+.menuBox p {
+	bottom: 20px;
+	right: 20px;
+}
+
+.menuBox.small {
+	width: 210px;
+	height: 210px;
+	background-position: center 45px;
+	background-repeat: no-repeat;
+}
+
+.menuBox.wide {
+	width: 480px;
+	height: 210px;
+	background-position: center 45px;
+	background-repeat: no-repeat;
+}
+
+.menuBox.big {
+	width: 460px;
+	height: 460px;
+	background-position: 40px 45px;
+	background-repeat: no-repeat;
+}
+
+#holiday {
+	background-image: url('../images/icons/icons_holiday.png');
+}
+
+#lieu {
+	background-image: url('../images/icons/icons_lieu.png');
+}
+
+#sick {
+	background-image: url('../images/icons/icons_sick.png');
+}
+
+#products {
+	background-image: url('../images/icons/icons_products.png');
+}
+
+#blank {
+	background-image: url('../images/icons/icons_home.png');
+}
+
+#messages {
+	background-image: url('../images/icons/icons_email.png');
+}
+
+#figures {
+	background-image: url('../images/icons/icons_kpi.png');
+}
+
+#staff {
+	background-image: url('../images/icons/icons_user.png');
+}
+
+#users {
+	background-image: url('../images/icons/icons_calendar.png');
+}
+
+#recruitment {
+	background-image: url('../images/icons/icons_recruitment.png');
+}
+
+#feedback {
+	background-image: url('../images/icons/icons_feedback.png');
+}
+
+
+/* @end */
+
+/* @group View Styling */
+
+
+/* @end */
+
+
+/* @group holiday */
+
+.pageHead.holiday {
+	background-image: url('../images/icons/icons_holiday.png');
+}
+
+div.form.holiday {
+	background: url('../images/icons/icons_holiday.png') no-repeat 40px 40px rgb(45, 123, 232);
+}
+
+#holidayPage .view {
+	background-color: rgb(45, 123, 232);
+}
+
+#holidayPage .view.approved,
+#lieuPage .view.approved
+{
+	background-color: rgb(94, 164, 40);
+}
+
+#holidayPage .view.unapproved,
+#lieuPage .view.unapproved {
+	background-color: rgb(186, 34, 46);
+}
+
+#holidayPage .view.pending,
+#lieuPage .view.pending {
+	background-color: rgb(208, 72, 46);
+}
+
+.pb {
+	margin-left: 30px;
+}
+
+#holidayPage img:first-of-type {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+
+#holidayPage img {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
+/* @end */
+
+/* @group Lieu */
+
+.pageHead.lieu {
+	background-image: url('../images/icons/icons_lieu.png');
+}
+
+div.form.lieu {
+	background: url('../images/icons/icons_lieu.png') no-repeat 40px 40px rgb(94, 164, 40);
+}
+
+div.form.staff {
+	background: url('../images/icons/icons_user.png') no-repeat 40px 40px rgb(94, 164, 40);
+}
+
+#lieuPage .view {
+	background-color: rgb(94, 164, 40);
+}
+
+/* @end */
+
+/* @group Sick */
+
+.pageHead.sick {
+	background-image: url('../images/icons/icons_sick.png');
+}
+
+div.form.sick {
+	background: url('../images/icons/icons_sick.png') no-repeat 40px 40px rgb(84, 57, 172);
+}
+
+#sickPage .view {
+	background-color: rgb(84, 57, 172);
+}
+
+/* @end */
+
+/* @group Recruitment */
+
+#roleApplicantPage .view {
+	background-color: rgb(208, 72, 46);
+}
+
+/* @end */
+
+/* @group Feedback */
+
+.pageHead.feedback {
+	background-image: url('../images/icons/icons_feedback.png');
+}
+
+#feedbackPage .view {
+	background-color: background-color: rgb(186, 34, 46);
+}
+
+/* @end */
+
+.pageHead.staff {
+	background-image: url('../images/icons/icons_user.png');
+}
+
+div.form.staff {
+	background: url('../images/icons/icons_user.png') no-repeat 40px 40px rgb(94, 164, 40);
+}
+
+#staffPage .view {
+	background-color: rgb(94, 164, 40);
+}
+
+/* @group footer */
+
+footer {
+	font-size: .8em;
+	color: #FFF;
+	padding-left: 20px;
+	margin-top: 400px;
+	margin-left: -20px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #000;
+}
+
+/* @end */
+
+/* @group Approval Form */
+
+#approve {
+	height: 110px;
+	width: 500px;
+	padding: 0;
+	padding-left: 30px;
+	margin-top: 40px;
+	float: left;
+	border: 3px solid #FFF;
+	background-image: none;
+}
+
+#approve #holiday-form div.row,
+#approve #lieu-form div.row {
+	float: left;
+	margin-top: 10px;
+}
+
+#approve label {
+	width: 100px;
+	margin-bottom: 0px;
+}
+
+#approve p.scale_label {
+	float: left;
+	width: 50px;
+	margin-top: 30px;
+	margin-left: 0px;
+	padding-left: 0;
+}
+
+#approve #Holiday_approved,
+#approve #Lieu_approved {
+	float: left;
+	width: 50px;
+	margin: 0;
+	margin-top: 20px;
+	margin-right: 150px;
+	
+}
+
+/* @end */
+
+/* @group Detail View Styling */
+
+.detail {
+	width: 600px;
+	padding: 20px;
+}
+
+table.detail-view .null
+{
+
+}
+
+table.detail-view
+{
+	border-collapse: collapse;
+	width: 600px;
+	margin: 0;
+}
+
+
+
+table.detail-view th, table.detail-view td
+{
+	font-size: 1.4em;
+	padding: 0.3em 0.6em;
+	vertical-align: top;
+	color: #FFF;
+	font-weight: normal;
+}
+
+table.detail-view th
+{
+	text-align: left;
+	width: 250px;
+}
+
+table.detail-view tr.odd
+{
+	background-color: none;
+}
+
+table.detail-view tr.even
+{
+	background: none;
+}
+
+table.detail-view tr.odd th
+{
+}
+
+table.detail-view tr.even th
+{
+}
+
+/* @end */
+
+footer {
+	font-size: 1em;
+	color: #FFF;
+	padding-left: 20px;
+	margin-top: 400px;
+	margin-left: -20px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #000;
+}
+
+	
+	
+
+
+
+
+
+
