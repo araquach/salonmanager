@@ -5,7 +5,10 @@
 <div id="staffPage" class="group">
 
 <div class="menuBox wide holiday" id="holiday">
-{{ HTML::link('/holiday/staff_holiday', "Holidays") }}
+
+@include('widgets.holiday')
+
+{{ HTML::link('/holiday/index', "Holidays") }}
 </div>
 
 @stop
