@@ -1,6 +1,6 @@
 <?php
 
-class HolidayTableSeeder extends Seeder {
+class HolidaysTableSeeder extends Seeder {
 
 	/**
 	 * Run the database seeds.
