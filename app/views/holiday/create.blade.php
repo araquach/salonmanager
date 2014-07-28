@@ -5,7 +5,7 @@
 
 <div class="form holiday">
 
-<form action="{{ action('HolidayController@showCreate') }}" method="post" role="form">
+<form action="{{ action('HolidayController@handleCreate') }}" method="post" role="form">
 <div>
 <label for="staff_id">Staff Id</label>
 <input type="text" name="staff_id" />

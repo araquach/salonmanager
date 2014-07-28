@@ -11,6 +11,8 @@
 |
 */
 
+Route::model('holiday', 'Holiday');
+
 Route::get('/', function()
 {
 	return View::make('home.index');
@@ -22,6 +24,10 @@ Route::get('/holiday/index', 'HolidayController@showIndex');
 
 Route::get('/holiday/create', 'HolidayController@showCreate');
 
+Route::get('/holiday/update/{holiday}', 'HolidayController@showUpdate');
+
 // Holiday Form Handlers
 
 Route::post('/holiday/create', 'HolidayController@handleCreate');
+
+Route::post('/holiday/update', 'HolidayController@handleUpdate');
