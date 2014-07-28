@@ -16,5 +16,11 @@ class StaffRolesTableSeeder extends Seeder {
 			'target' => '2000',
 			'commision' => '20',
 		));
+		
+		StaffRole::create(array(
+			'job_description' => 'Senior Stylist',
+			'target' => '3000',
+			'commision' => '30',
+		));
 	}
 }

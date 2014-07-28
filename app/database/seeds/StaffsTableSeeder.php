@@ -25,6 +25,21 @@ class StaffsTableSeeder extends Seeder {
 			'active' => '1',
 			'role' => '1',
 		));
+		
+		Staff::create(array(
+			'person_id' => '3',
+			'iris' => '333',
+			'salon_id' => '2',
+			'staff_role_id' => '2',
+			'dob' => '1984-08-30',
+			'username' => 'jimmysharpe',
+			'password' => 'parsnip',
+			'working_hours_week' => '40',
+			'working_hours_month' => '160',
+			'holiday_entitlement' => '28',
+			'active' => '1',
+			'role' => '2',
+		));
 	}
 }
 
