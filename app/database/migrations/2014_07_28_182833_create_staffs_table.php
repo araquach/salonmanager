@@ -15,10 +15,10 @@ class CreateStaffsTable extends Migration {
 		Schema::create('staffs', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('person_id');
+			$table->integer('person_id')->unsigned();
 			$table->integer('iris');
-			$table->integer('salon_id');
-			$table->integer('staff_role_id');
+			$table->integer('salon_id')->unsigned();
+			$table->integer('staff_role_id')->unsigned();
 			$table->date('dob');
 			$table->string('username');
 			$table->string('password');

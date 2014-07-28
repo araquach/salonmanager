@@ -5,7 +5,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHolidayTable extends Migration {
+class CreateHolidaysTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -14,10 +14,10 @@ class CreateHolidayTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('holiday', function(Blueprint $table)
+		Schema::create('holidays', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('staff_id');
+			$table->integer('staff_id')->unsigned();
 			$table->integer('hours_requested');
 			$table->boolean('prebooked');
 			$table->dateTime('request_date_from');
@@ -35,7 +35,7 @@ class CreateHolidayTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('holiday');
+		Schema::drop('holidays');
 	}
 
 }

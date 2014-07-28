@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class RenamePersonsTable extends Migration {
+class AddConstraintToHoliday extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,9 @@ class RenamePersonsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('persons', function(Blueprint $table)
+		Schema::table('holidays', function(Blueprint $table)
 		{
-			Schema::rename('persons', 'people');
+			$table->foreign('staff_id')->references('id')->on('staffs');
 		});
 	}
 
@@ -25,9 +25,9 @@ class RenamePersonsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('persons', function(Blueprint $table)
+		Schema::table('holidays', function(Blueprint $table)
 		{
-			Schema::rename('people', 'persons');
+			$table->dropForeign('holidays_staff_id_foreign');
 		});
 	}
 

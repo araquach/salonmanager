@@ -12,7 +12,7 @@ class HolidaysTableSeeder extends Seeder {
 		DB::table('holidays')->delete();
 		
 		Holiday::create(array(
-			'staff_id' => '2',
+			'staff_id' => '1',
 			'hours_requested' => '4',
 			'prebooked' => '1',
 			'request_date_from' => '2008-11-11 13:23:44',
