@@ -16,7 +16,12 @@ Route::get('/', function()
 	return View::make('home.index');
 });
 
-Route::get('/holiday/index', function()
-{
-	return View::make('holiday.index');
-});
+// Holiday Routes
+
+Route::get('/holiday/index', 'HolidayController@showIndex');
+
+Route::get('/holiday/create', 'HolidayController@showCreate');
+
+// Holiday Form Handlers
+
+Route::post('/holiday/create', 'HolidayController@handleCreate');
