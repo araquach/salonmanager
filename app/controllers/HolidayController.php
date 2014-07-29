@@ -4,7 +4,8 @@ class HolidayController extends BaseController {
 
 	public function showIndex()
 	{
-		return View::make('/holiday/index');
+		$holidays = Holiday::all();
+		return View::make('/holiday/index', compact('holidays'));
 	}
 	
 	public function showCreate()
