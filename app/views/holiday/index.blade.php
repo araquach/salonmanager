@@ -6,6 +6,12 @@
 
 <div class="pageHead holiday">
 
+<nav>
+<ul>
+<li>{{ HTML::link('/holiday/create', "Book Holiday") }}</li>
+</ul>
+</nav>
+
 @include('widgets.holiday')
 
 </div> <!--.pageHead holiday-->
