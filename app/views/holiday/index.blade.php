@@ -19,16 +19,19 @@
 					@else 
 						pending 
 					@endif" >
-
-	<b>ID: {{ $holiday->id }}</b>
-	<br>
-	<b>Hours Requested: {{ $holiday->hours_requested }}</p> {{-- hour converter function --}}</b>
+					
+	
+	<a href="{{ action('HolidayController@showUpdate', $holiday->id) }}"></a>
+	<b>Requested:</b> 
+	{{ $holiday->hours_requested }} {{-- hour converter function --}}
 	<br />
 
-	<b>Request Date From: {{ $holiday->request_date_from }}</p> {{-- use date formatter --}}</b>
+	<b>From:</b> 
+	{{ $holiday->request_date_from->toFormattedDateString() }} {{-- use date formatter --}}
 	<br />
 
-	<b>Request Date To: {{ $holiday->request_date_to }}</p> {{-- use date formatter --}}</b>
+	<b>To:</b> 
+	{{ $holiday->request_date_to->toFormattedDateString() }} {{-- use date formatter --}}
 	<br />
 	
 	@if($holiday->id == 1) 
@@ -40,8 +43,6 @@
 	@if($holiday->prebooked ==1) 
 		<img src="{{ asset('images/icons/pb-11.png') }}">
 	@endif
-		
-	<br />
 </div>
 
 @endforeach
