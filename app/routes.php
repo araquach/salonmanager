@@ -11,18 +11,29 @@
 |
 */
 
-Route::model('holiday', 'Holiday');
+// Home Routes
 
-Route::get('/', function()
-{
-	return View::make('home.index');
-});
+Route::get('/', 'homeController@showIndex');
+
+Route::get('/login', 'HomeController@showLogin');
+
+
+// User Routes
+
+Route::get('/user/create', 'UserController@showCreate');
+
+// User Form Handlers
+
+Route::post('/user/create', 'UserController@handleCreate');
+
 
 // Holiday Routes
 
+Route::model('holiday', 'Holiday');
+
 Route::get('/holiday/index', 'HolidayController@showIndex');
 
-Route::get('/holiday/create', 'HolidayController@showCreate');
+Route::get('/holiday/create', array('before' => 'auth.basic', 'HolidayController@showCreate'));
 
 Route::get('/holiday/update/{holiday}', 'HolidayController@showUpdate');
 
