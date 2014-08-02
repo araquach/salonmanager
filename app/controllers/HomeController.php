@@ -25,9 +25,20 @@ class HomeController extends BaseController {
 		return View::make('/home/login');
 	}
 	
+	public function actionLogOut()
+	{
+		Auth::logout();
+		return Response::make('You\'re now logged out');
+	}
+	
 	public function handleLogin() 
 	{
-			
+		$credentials = Input::only('username', 'password');
+		if (Auth::attempt($credentials)) {
+			return Redirect::intended('/holiday/index');
+		}
+		
+		return Redirect::to('/login');
 	}
 
 }

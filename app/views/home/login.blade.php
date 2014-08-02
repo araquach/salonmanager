@@ -2,7 +2,9 @@
 
 @section('content')
 
-<form action="{{ url('/home/login')}}" method="post" >
+<div class="form staff">
+
+<form action="{{ url('/login')}}" method="post" >
 	
 	<div>
 		<label for="username">Username:</label>
@@ -17,5 +19,7 @@
 	<input type="submit" value="Login" />
 
 </form>
+
+</div> <!--form-->
 
 @stop

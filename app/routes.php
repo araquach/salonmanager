@@ -17,6 +17,12 @@ Route::get('/', 'homeController@showIndex');
 
 Route::get('/login', 'HomeController@showLogin');
 
+Route::get('/logout', 'HomeController@actionLogOut');
+
+// Home Form Handlers
+
+Route::post('/login', 'HomeController@handleLogin');
+
 
 // User Routes
 
@@ -33,7 +39,7 @@ Route::model('holiday', 'Holiday');
 
 Route::get('/holiday/index', 'HolidayController@showIndex');
 
-Route::get('/holiday/create', array('before' => 'auth.basic', 'HolidayController@showCreate'));
+Route::get('/holiday/create', array('before' => 'auth', 'HolidayController@showCreate'));
 
 Route::get('/holiday/update/{holiday}', 'HolidayController@showUpdate');
 
