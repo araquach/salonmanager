@@ -28,7 +28,7 @@ class HomeController extends BaseController {
 	public function actionLogOut()
 	{
 		Auth::logout();
-		return Response::make('You\'re now logged out');
+		return Redirect::to('/login');
 	}
 	
 	public function handleLogin() 
