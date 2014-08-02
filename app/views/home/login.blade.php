@@ -16,7 +16,9 @@
 		<input type="password" name="password" placeholder="Password" />
 	</div>
 	
+	<div class="row buttons">
 	<input type="submit" value="Login" />
+	</div> <!--row buttons-->
 
 </form>
 
