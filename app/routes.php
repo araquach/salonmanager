@@ -11,6 +11,7 @@
 |
 */
 
+
 // Home Routes
 
 Route::get('/', 'homeController@showIndex');
@@ -35,11 +36,13 @@ Route::post('/user/create', 'UserController@handleCreate');
 
 // Holiday Routes
 
+Route::when('holiday/*', 'auth');
+
 Route::model('holiday', 'Holiday');
 
-Route::get('/holiday/index', 'HolidayController@showIndex');
+Route::get('/holiday/index', 'HolidayController@showIndex' );
 
-Route::get('/holiday/create', array('before' => 'auth', 'HolidayController@showCreate'));
+Route::get('/holiday/create', 'HolidayController@showCreate');
 
 Route::get('/holiday/update/{holiday}', 'HolidayController@showUpdate');
 

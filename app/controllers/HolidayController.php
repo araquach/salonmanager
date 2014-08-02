@@ -10,6 +10,8 @@ class HolidayController extends BaseController {
 	
 	public function showCreate()
 	{
+		
+	
 		return View::make('/holiday/create');
 	}
 	

@@ -48,6 +48,7 @@ Route::filter('auth', function()
 	}
 });
 
+Route::when('holiday/*', 'auth');
 
 Route::filter('auth.basic', function()
 {

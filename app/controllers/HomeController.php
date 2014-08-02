@@ -34,7 +34,8 @@ class HomeController extends BaseController {
 	public function handleLogin() 
 	{
 		$credentials = Input::only('username', 'password');
-		if (Auth::attempt($credentials)) {
+		
+		if (Auth::attempt($credentials)){
 			return Redirect::intended('/holiday/index');
 		}
 		
