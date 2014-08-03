@@ -156,6 +156,10 @@ a p.pageLink:hover {
 .summary {
 	display: none;
 }
+
+h2#adminHeader {
+	margin-bottom: 30px;
+}
 /* @end */
 
 /* @group general Colour styles */
@@ -586,12 +590,6 @@ footer {
 .detail {
 	width: 600px;
 	padding: 20px;
-}
-
-.detail ul li {
-	color: #FFF;
-	font-size: 1.5em;
-	margin-bottom: .7em;
 }
 
 table.detail-view .null

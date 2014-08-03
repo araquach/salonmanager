@@ -12,7 +12,7 @@
 </ul>
 </nav>
 
-@include('widgets.holiday')
+@include('widgets.admin.holiday')
 
 </div> <!--.pageHead holiday-->
 

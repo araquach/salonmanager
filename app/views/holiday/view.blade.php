@@ -14,13 +14,26 @@
 						@endif">
 </div>
 
-<ul>
-	<li>Days Requested: {{ $holiday->hours_requested }}</li>
-	<li>From: {{ $holiday->request_date_from->toFormattedDateString() }}</li>
-	<li>To: {{ $holiday->request_date_to->toFormattedDateString() }}</li>
-	<li>Approved? {{ $holiday->approved ? 'Yes' : 'No' }}</li>
-	<li>{{--  saturday function to show icon--}}</li>
-</ul>
+<table class="detail-view">
+	<tr>
+		<td><strong>Days Requested:</strong></td>
+		<td>{{ $holiday->hours_requested }}</td>
+	</tr>
+	<tr>
+		<td><strong>From:</strong></td>
+		<td>{{ $holiday->request_date_from->toFormattedDateString() }}</td>
+	</tr>
+	<tr>
+		<td><strong>To:</strong></td>
+		<td>{{ $holiday->request_date_to->toFormattedDateString() }}</td>
+	</tr>
+	<tr>
+		<td><strong>Approved?:</strong></td>
+		<td>{{ $holiday->approved ? 'Yes' : 'No' }}</td>
+	</tr>
+	{{--  saturday function to show icon--}}
+</table>
+
 
 {{ HTML::link('/holiday/index', "Back to list") }}
 

@@ -6,7 +6,7 @@
 
 <div class="menuBox wide holiday" id="holiday">
 
-@include('widgets.holiday')
+@include('widgets.admin.holiday')
 
 <a href="{{ url('/holiday/index') }}"><h2>Holidays</h2></a>
 </div> <!--end holiday-->
