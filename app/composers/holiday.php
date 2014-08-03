@@ -2,9 +2,9 @@
 
 View::composer('widgets.holiday', function ($view)
 {
-    $total = Holiday::sum('hours_requested');
+    $total = Holiday::where('staff_id', '=', Auth::id())->get()->sum('hours_requested');
     
-    $entitlement = Staff::sum('holiday_entitlement');
+    $entitlement = Staff::where('id', '=', Auth::id())->get()->sum('holiday_entitlement');
     
     $remaining = $entitlement - $total;
     

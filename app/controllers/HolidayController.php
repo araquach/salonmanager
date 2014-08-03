@@ -4,7 +4,7 @@ class HolidayController extends BaseController {
 
 	public function showIndex()
 	{
-		$holidays = Holiday::all();
+		$holidays = Holiday::where('staff_id', '=', Auth::id())->get();
 		return View::make('/holiday/index', compact('holidays'));
 	}
 	
