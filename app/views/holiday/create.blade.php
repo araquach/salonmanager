@@ -2,14 +2,20 @@
 
 @section('content')
 
+<script>
+  $(function() {
+    $( ".datepicker" ).each(function(){
+    	$(this).datepicker();
+    })
+  });
+</script>
+
 
 <div class="form holiday">
 
 <form action="{{ action('HolidayController@handleCreate') }}" method="post" role="form">
-<div>
-<label for="staff_id">Staff Id</label>
-<input type="text" name="staff_id" />
-</div>
+
+<input type="hidden" name="staff_id" value="{{ Auth::id() }}" />
 
 <div>
 <label for="hours_requested">Hours Requested</label>
@@ -24,12 +30,12 @@
 
 <div>
 <label for="request_date_from">Request Date From</label>
-<input type="text" name="request_date_from" />
+<input type="text" class="" name="request_date_from" />
 </div>
 
 <div>
 <label for="request_date_to">Request Date to</label>
-<input type="text" name="request_date_to" />
+<input type="text" class="" name="request_date_to" />
 </div>
 
 <div>

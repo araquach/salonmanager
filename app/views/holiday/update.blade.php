@@ -2,6 +2,13 @@
 
 @section('content')
 
+<script>
+  $(function() {
+    $( ".datepicker" ).each(function(){
+    	$(this).datepicker();
+    })
+  });
+</script>
 
 <div class="form holiday">
 
@@ -20,30 +27,13 @@
 </div>
 
 <div>
-<label for="prebooked">
-	<input type="checkbox" name="prebooked" {{ $holiday->prebooked ? checked : '' }}" />Prebooked?
-</label>
-</div>
-
-<div>
 <label for="request_date_from">Request Date From</label>
-<input type="text" name="request_date_from" value="{{ $holiday->request_date_from }}" />
+<input type="text" name="request_date_from" class="datepicker" value="{{ $holiday->request_date_from }}" />
 </div>
 
 <div>
 <label for="request_date_to">Request Date to</label>
-<input type="text" name="request_date_to" value="{{ $holiday->request_date_to }}" />
-</div>
-
-<div>
-<label for="approved">
-	<input type="checkbox" name="approved" {{ $holiday->approved ? checked : '' }}/>Approved? 
-</label>
-</div>
-
-<div>
-<label for="requested_on_date">Requested on date</label>
-<input type="text" name="requested_on_date" value="{{ $holiday->requested_on_date }}" />
+<input type="text" name="request_date_to" class="datepicker" value="{{ $holiday->request_date_to }}" />
 </div>
 
 
