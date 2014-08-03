@@ -33,11 +33,11 @@
 	<br />
 
 	<b>From:</b> 
-	{{ $holiday->request_date_from->toFormattedDateString() }} {{-- use date formatter --}}
+	{{ $holiday->request_date_from->toFormattedDateString() }}
 	<br />
 
 	<b>To:</b> 
-	{{ $holiday->request_date_to->toFormattedDateString() }} {{-- use date formatter --}}
+	{{ $holiday->request_date_to->toFormattedDateString() }}
 	<br />
 	
 	@if($holiday->id == 1) 

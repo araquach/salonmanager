@@ -6,8 +6,8 @@
 
 <ul>
 	<li>Days Requested: {{ $holiday->hours_requested }}</li>
-	<li>From: {{ $holiday->request_date_from }}</li>
-	<li>To: {{ $holiday->request_date_to }}</li>
+	<li>From: {{ $holiday->request_date_from->toFormattedDateString() }}</li>
+	<li>To: {{ $holiday->request_date_to->toFormattedDateString() }}</li>
 	<li>Approved? {{ $holiday->approved }}</li>
 	<li>Saturday? {{--  saturday function --}}</li>
 </ul>
