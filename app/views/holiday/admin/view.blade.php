@@ -4,6 +4,16 @@
 
 <div class="detail holiday">
 
+<div class="detailCode @if($holiday->approved == 1)
+							unapproved
+						@elseif($holiday->approved == 2)
+							approved
+						@else
+							pending
+						@endif">
+</div>
+
+
 <ul>
 	<li>Staff: {{-- get staffs name --}}</li>
 	<li>Days Requested: {{ $holiday->hours_requested }}</li>

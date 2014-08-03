@@ -588,6 +588,12 @@ footer {
 	padding: 20px;
 }
 
+.detail ul li {
+	color: #FFF;
+	font-size: 1.5em;
+	margin-bottom: .7em;
+}
+
 table.detail-view .null
 {
 
