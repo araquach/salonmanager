@@ -15,6 +15,7 @@
 // Home Routes
 
 Route::get('/', 'homeController@showIndex');
+Route::get('/admin', array('before' => 'auth', 'uses' => 'homeController@showAdminIndex'));
 Route::get('/login', 'HomeController@showLogin');
 Route::get('/logout', 'HomeController@actionLogOut');
 

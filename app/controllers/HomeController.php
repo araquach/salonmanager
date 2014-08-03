@@ -20,6 +20,11 @@ class HomeController extends BaseController {
 		return View::make('/home/index');
 	}
 	
+	public function showAdminIndex()
+	{
+		return View::make('/home/admin_index');
+	}
+	
 	public function showLogin() 
 	{
 		return View::make('/home/login');
