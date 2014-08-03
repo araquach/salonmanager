@@ -4,15 +4,11 @@
 |--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
 */
 
-
 // Home Routes
+
+Route::when('admin/*', 'auth');
 
 Route::get('/', 'homeController@showIndex');
 Route::get('/admin', array('before' => 'auth', 'uses' => 'homeController@showAdminIndex'));
@@ -36,6 +32,7 @@ Route::post('/user/create', 'UserController@handleCreate');
 // Holiday Routes
 
 Route::when('holiday/*', 'auth');
+
 Route::model('holiday', 'Holiday');
 Route::get('/holiday/index', 'HolidayController@showIndex' );
 Route::get('/holiday/create', 'HolidayController@showCreate');

@@ -14,6 +14,7 @@
 	{{-- Scripts --}}
 	
 	{{ HTML::script('scripts/jquery.js'); }}
+	{{ HTML::script('libs/jquery-ui/jquery-ui.js') }}
 	{{ HTML::script('scripts/modernizr.js'); }}
 	{{ HTML::script('scripts/selectivizr-min.js'); }}
 	
