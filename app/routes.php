@@ -46,6 +46,7 @@ Route::post('/holiday/update', 'HolidayController@handleUpdate');
 // Holiday Admin Routes
 
 Route::get('admin/holiday/index', 'HolidayController@showAdminIndex' );
+Route::get('admin/holiday/view/{holiday}', 'HolidayController@showAdminView' );
 Route::get('admin/holiday/create', 'HolidayController@showAdminCreate');
 Route::get('admin/holiday/update/{holiday}', 'HolidayController@showAdminUpdate');
 

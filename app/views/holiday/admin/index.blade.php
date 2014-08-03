@@ -27,7 +27,7 @@
 					@endif" >
 					
 	
-	<a href="{{ action('HolidayController@showUpdate', $holiday->id) }}"></a>
+	<a href="{{ action('HolidayController@showAdminView', $holiday->id) }}"></a>
 	<b>Requested:</b> 
 	{{ $holiday->hours_requested }} {{-- hour converter function --}}
 	<br />

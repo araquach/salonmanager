@@ -61,6 +61,10 @@ class HolidayController extends BaseController {
 		return View::make('/holiday/admin/index', compact('holidays'));
 	}
 	
+	public function showAdminView(Holiday $holiday) {
+		return View::make('holiday/admin/view', compact('holiday'));
+	}
+	
 	public function showAdminCreate()
 	{
 		return View::make('/holiday/admin/create');
