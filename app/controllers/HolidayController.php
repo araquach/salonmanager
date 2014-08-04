@@ -2,9 +2,33 @@
 
 class HolidayController extends BaseController {
 
-	public function showIndex()
+	public function showIndex($category = null)
 	{
-		$holidays = Holiday::where('staff_id', '=', Auth::id())->get();
+	
+		if($category == 'awaiting')
+		{
+			$holidays = Holiday::where('staff_id', '=', Auth::id())
+			->where('approved', '=', 0)
+			->get();
+		}
+		elseif($category == 'upcoming') 
+		{
+			$holidays = Holiday::where('staff_id', '=', Auth::id())
+			->where('approved', '=', 2)
+			->where('request_date_from', '>=', Carbon::now())
+			->get();
+		}
+		elseif($category == 'denied') 
+		{
+			$holidays = Holiday::where('staff_id', '=', Auth::id())
+			->where('approved', '=', 1)
+			->get();
+		}
+		else
+		{
+			$holidays = Holiday::where('staff_id', '=', Auth::id())->get();
+		}
+		
 		return View::make('/holiday/index', compact('holidays'));
 	}
 	
