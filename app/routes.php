@@ -31,7 +31,7 @@ Route::post('/user/create', 'UserController@handleCreate');
 
 // Holiday Routes
 
-Route::when('holiday/*', 'auth|CountSaturday');
+Route::when('holiday/*', 'auth');
 Route::model('holiday', 'Holiday');
 Route::get('/holiday/index/{category?}', 'HolidayController@showIndex' );
 Route::get('/holiday/view/{holiday}', 'HolidayController@showView' );
