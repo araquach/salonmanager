@@ -42,7 +42,12 @@
 			<ul>
 				<li>{{ HTML::link('/', "Home") }}</li>
 				<li>{{ HTML::link('admin', "Admin") }}</li>
-				<li>{{ HTML::link('login', "Log in") }}</li>
+				@if(!Auth::id())
+					<li>{{ HTML::link('login', "Log in") }}</li>
+				@endif
+				@if(Auth::id())
+					<li><a href="{{ url('logout') }}">Log out {{ Auth::user()->username }}</a></li>
+				@endif
 				
 			</ul>
 		</nav>
