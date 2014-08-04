@@ -21,26 +21,31 @@ class HolidayController extends BaseController {
 	{
 		$data = Input::all();
 		
-		$rules =array(
-			'hours_requested' => 'datetime',
-			'prebooked' => 'boolean',
-			'request_date_from' => 'datetime',
-			'request_date_to' => 'datetime',
-			'approved' => 'boolean',
-			'requested_on_date' => 'datetime',
+		$rules = array(
+			'hours_requested' => 'required',
+			'request_date_from' => 'required',
+			'request_date_to' => 'required',
+			'requested_on_date' => 'required',
 		);
-	
-		$holiday = new Holiday;
-		$holiday->staff_id = Input::get('staff_id');
-		$holiday->hours_requested = Input::get('hours_requested');
-		$holiday->prebooked = Input::has('prebooked');
-		$holiday->request_date_from = Input::get('request_date_from');
-		$holiday->request_date_to = Input::get('request_date_to');
-		$holiday->approved = Input::has('approved');
-		$holiday->requested_on_date = Input::get('requested_on_date');
-		$holiday->save();
 		
-		return Redirect::action('HolidayController@showIndex');
+		$validator = Validator::make($data, $rules);
+		
+		if($validator->passes()){
+		
+			$holiday = new Holiday;
+			$holiday->staff_id = Input::get('staff_id');
+			$holiday->hours_requested = Input::get('hours_requested');
+			$holiday->prebooked = Input::has('prebooked');
+			$holiday->request_date_from = Input::get('request_date_from');
+			$holiday->request_date_to = Input::get('request_date_to');
+			$holiday->approved = Input::has('approved');
+			$holiday->requested_on_date = Input::get('requested_on_date');	
+			$holiday->save();
+				
+			return Redirect::action('HolidayController@showIndex');
+		}
+				
+		return Redirect::action('HolidayController@showCreate')->withErrors($validator);
 	}
 	
 	public function showUpdate(Holiday $holiday)

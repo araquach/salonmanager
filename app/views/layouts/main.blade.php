@@ -43,7 +43,7 @@
 				<li>{{ HTML::link('/', "Home") }}</li>
 				<li>{{ HTML::link('admin', "Admin") }}</li>
 				<li>{{ HTML::link('login', "Log in") }}</li>
-				<a href="{{ url('logout') }}">Logout {{ Auth::user()->username }}</a>
+				
 			</ul>
 		</nav>
 	</div>

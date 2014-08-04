@@ -15,6 +15,17 @@
 
 <form action="{{ action('HolidayController@handleCreate') }}" method="post" role="form">
 
+@if($errors->any())
+	<div class="errorSummary">
+		<p>Please fix the following input errors</p>
+		<ul>
+		@foreach($errors->all() as $message)
+			<li>{{ $message }}</li>
+		@endforeach
+		</ul>
+	</div> <!--errorSummary-->
+@endif
+
 <input type="hidden" name="staff_id" value="{{ Auth::id() }}" />
 
 <div>
