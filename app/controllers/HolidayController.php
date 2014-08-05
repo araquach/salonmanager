@@ -49,7 +49,6 @@ class HolidayController extends BaseController {
 			'hours_requested' => 'required',
 			'request_date_from' => 'required',
 			'request_date_to' => 'required',
-			'requested_on_date' => 'required',
 		);
 		
 		$validator = Validator::make($data, $rules);
