@@ -8,12 +8,16 @@ class Staff extends Eloquent {
 		$this->belongsTo('StaffRole');
 	}
 	
-	public function Person() {
+	public function person() {
 		$this->belongsTo('Person');
 	}
 	
 	public function salon() {
 		$this->belongsTo('Salon');
+	}
+	
+	public function user() {
+		$this->belongsTo('User');
 	}
 	
 }
