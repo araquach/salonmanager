@@ -28,41 +28,25 @@
 
 <input type="hidden" name="staff_id" value="{{ Auth::id() }}" />
 
-<div>
-<label for="hours_requested">Hours Requested</label>
-<input type="text" name="hours_requested" />
-</div>
 
 <div>
-<label for="prebooked">
-	<input type="checkbox" name="prebooked" />Prebooked?
-</label>
-</div>
-
-<div>
-<label for="request_date_from">Request Date From</label>
+<label for="request_date_from">From:</label>
 <input type="text" class="" name="request_date_from" />
 </div>
 
 <div>
-<label for="request_date_to">Request Date to</label>
+<label for="request_date_to">To:</label>
 <input type="text" class="" name="request_date_to" />
 </div>
 
 <div>
-<label for="approved">
-	<input type="checkbox" name="approved" />Approved?
-</label>
-</div>
-
-<div>
-<label for="requested_on_date">Requested on date</label>
-<input type="text" name="requested_on_date" />
+<label for="hours_requested">Days Requested:</label>
+<input type="text" name="hours_requested" />
 </div>
 
 <div class="row buttons">
 <input type="submit"  value="create" />
-<a href="{{ action('HolidayController@showIndex') }}">Cancel</a>
+<a href="{{ action('HolidayController@showIndex') }}">cancel</a>
 </div>
 
 </form>
