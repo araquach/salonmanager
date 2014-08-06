@@ -10,5 +10,11 @@ View::composer('widgets.holiday', function ($view)
     
     $saturday = 4;
     
-    $view->with(array('total'=>$total, 'entitlement'=>$entitlement, 'remaining'=>$remaining, 'saturday'=>$saturday));
+    $logged = Auth::user()->id;
+    
+    $user = Staff::where('user_id', '=', $logged)->first();
+    
+    $name = Person::where('id', '=', $user->person_id)->first();
+    
+    $view->with(array('total'=>$total, 'entitlement'=>$entitlement, 'remaining'=>$remaining, 'saturday'=>$saturday, 'name'=>$name));
 });
