@@ -8,8 +8,8 @@ class Staff extends Eloquent {
 		$this->hasOne('StaffRole');
 	}
 	
-	public function Person() {
-		$this->hasOne('Person');
+	public function person() {
+		$this->belongsTo('Person');
 	}
 	
 	public function salon() {

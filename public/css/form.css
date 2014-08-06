@@ -74,6 +74,25 @@ div.row.buttons input {
 	opacity: .75;
 }
 
+div.row a {
+	margin-left: 20px;
+	padding: 8px 14px;
+	background: none;
+	border: 6px solid #FFF;
+	font-size: 1.2em;
+	color: #FFF;
+	font-weight: bolder;
+	text-align: center;
+	border-radius: 20px;
+	line-height: .7em;
+	opacity: .75;
+	text-decoration: none;
+}
+
+div.row a:hover {
+	opacity: 1;
+}
+
 div.row.buttons input:hover {
 	opacity: 1;
 }
