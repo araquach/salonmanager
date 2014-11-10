@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'salonmanager',
+			'database'  => 'forge',
 			'username'  => 'username',
 			'password'  => 'password',
 			'charset'   => 'utf8',
