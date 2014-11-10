@@ -9,7 +9,7 @@ class PeopleTableSeeder extends Seeder {
 	 */
 	public function run()
 	{
-		DB::table('people')->delete();
+		Person::truncate();
 		
 		Person::create(array(
 			'first_name' => 'Adam',

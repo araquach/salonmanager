@@ -9,7 +9,7 @@ class StaffRolesTableSeeder extends Seeder {
 	 */
 	public function run()
 	{
-		DB::table('staff_roles')->delete();
+		StaffRole::truncate();
 		
 		StaffRole::create(array(
 			'job_description' => 'Stylist',

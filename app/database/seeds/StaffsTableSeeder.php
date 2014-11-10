@@ -9,7 +9,7 @@ class StaffsTableSeeder extends Seeder {
 	 */
 	public function run()
 	{
-		DB::table('staffs')->delete();
+		Staff::truncate();
 		
 		Staff::create(array(
 			'person_id' => '1',

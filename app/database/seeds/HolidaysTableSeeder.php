@@ -9,7 +9,7 @@ class HolidaysTableSeeder extends Seeder {
 	 */
 	public function run()
 	{
-		DB::table('holidays')->delete();
+		Holiday::truncate();
 		
 		Holiday::create(array(
 			'staff_id' => '1',

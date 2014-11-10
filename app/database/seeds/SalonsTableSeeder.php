@@ -9,7 +9,7 @@ class SalonsTableSeeder extends Seeder {
 	 */
 	public function run()
 	{
-		DB::table('salons')->delete();
+		Salon::truncate();
 		
 		Salon::create(array(
 			'salon' => 'Jakata',

@@ -9,7 +9,7 @@ class UsersTableSeeder extends Seeder {
 	 */
 	public function run()
 	{
-		DB::table('users')->delete();
+		User::truncate();
 		
 		User::create(array(
 			'username' => 'adamcarter',
